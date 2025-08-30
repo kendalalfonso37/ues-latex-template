@@ -10,7 +10,7 @@
     // 
     "folders": [
         {
-            "path": "../"
+            "path": "../."
         }
     ],
     "settings": {
@@ -22,8 +22,6 @@
             "editor.defaultFormatter": "James-Yu.latex-workshop"
         },
         "cSpell.words": [
-            "absorbancia",
-            "actuadores",
             "Arduino",
             "loop",
             "setup",
@@ -38,11 +36,13 @@
         // The minimum length of a word before checking it against a dictionary.
         "cSpell.minWordLength": 4,
         // Specify file types to spell check.
-        "cSpell.enabledLanguageIds": [
-            "markdown",
-            "latex",
-            "plaintext",
-        ],
+        "cSpell.enabledFileTypes": {
+            // "*": true,
+            "latex": true,
+            "markdown": true,
+            "plaintext": true,
+            "bibtex": true
+        },
         // Enable / Disable the spell checker.
         "cSpell.enabled": true,
         // Display the spell checker status on the status bar.
