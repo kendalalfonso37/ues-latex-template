@@ -1,0 +1,24 @@
+\begingroup 
+
+  % Ocultar numeración en portada
+  \pagenumbering{gobble}%
+
+  \thispagestyle{empty}
+  \begin{center}
+    \textbf{\MakeUppercase{\UESuniversity}}\\[0.20cm]
+    \textbf{\MakeUppercase{\UESfaculty}}\\[0.20cm]
+    \textbf{\MakeUppercase{\UESschool}}\\[1.0cm]
+    \begin{minipage}{0.50\textwidth}\centering
+      \maybeincludegraphics[0.50\linewidth]{\UESlogopath}
+    \end{minipage}\\[1.0cm]
+    \textbf{\MakeUppercase{\UEStitle}}\\[0.20cm]
+    \textbf{PRESENTADO POR:}\\[0.2cm]
+    \typesetauthors\par\vspace{0.5cm}
+    \textbf{PARA OPTAR AL TITULO DE:}\\[0.2cm]
+    \textbf{\MakeUppercase{\UESdegree}}\\[0.2cm]
+    % \vfill
+    \textbf{\MakeUppercase{\UEScity, \UESmonthyear}}
+  \end{center}
+  \clearpage
+
+\endgroup

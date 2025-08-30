@@ -1,0 +1,72 @@
+\chapter{Introducción}
+Esta plantilla sigue el estilo común que emplean los estudiantes de la \textit{Universidad de El Salvador} para sus trabajos de graduación: portada, aprobación de junta/directiva, agradecimientos, índices (figuras, tablas, algoritmos y códigos fuente), capítulos, apéndices y bibliografía.
+
+\section{Estructura del proyecto}
+La estructura sugerida de carpetas y archivos es:
+\begin{verbatim}
+.
+|-- DEIthesis.cls
+|-- appendices/
+|   |-- appendix1.tex
+|   `-- code_listings.tex
+|-- chapters/
+|   |-- 01_introduction.tex
+|   `-- 02_conclusion.tex
+|-- code/
+|-- frontmatter/
+|   |-- abstract.tex
+|   `-- thanks.tex
+|-- main.tex
+|-- references.bib
+|-- res/           % logos institucionales
+`-- assets/        % imágenes/figuras del documento
+\end{verbatim}
+
+\section{Figuras, tablas, algoritmos y código}
+En la \cref{fig:ejemplo-figura} se ilustra una figura de ejemplo. La \cref{tab:ejemplo-tabla} muestra una tabla. El \cref{alg:ejemplo} ilustra un algoritmo. El \cref{lst:ejemplo-codigo} muestra un fragmento de código.
+
+\begin{figure}[H]
+  \centering
+  % Coloca aquí assets como PNG/JPG/PDF; si no existe, se dibuja un recuadro.
+  \fbox{\rule{0pt}{4cm}\rule{6cm}{0pt}} % marcador de posición
+  \caption{Figura de ejemplo}\label{fig:ejemplo-figura}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \caption{Tabla de ejemplo}\label{tab:ejemplo-tabla}
+  \begin{tabular}{lcc}
+    \toprule
+    Métrica & Valor 1 & Valor 2 \\
+    \midrule
+    A & 10 & 20 \\
+    B & 30 & 40 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{algorithm}[H]
+  \DontPrintSemicolon
+  \caption{Algoritmo de ejemplo}\label{alg:ejemplo}
+  \KwIn{Entrada $x$}
+  \KwOut{Salida $y$}
+  $y \leftarrow 0$\;
+  \For{$i \leftarrow 1$ \KwTo $n$}{
+    $y \leftarrow y + f(x_i)$\;
+  }
+  \Return{$y$}\;
+\end{algorithm}
+
+\begin{lstlisting}[language=Python,caption={Código de ejemplo en Python},label={lst:ejemplo-codigo}]
+def suma(a, b):
+    return a + b
+
+print(suma(2, 3))
+\end{lstlisting}
+
+\section{Citas y bibliografía}
+Ejemplo de cita \parencite{lamport94,knuth1984texbook}. El estilo activo es \texttt{apa} con backend \texttt{biber}.
+
+\section{Acrónimos}
+Ejemplo de acrónimo: \gls{ppg}.
+Otro acrónimo: \gls{ecg}. Y otro más: \gls{latex}.

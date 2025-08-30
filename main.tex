@@ -1,0 +1,63 @@
+% main.tex - UES Thesis Template (APA + default fonts + double spacing)
+\documentclass{DEIthesis}
+
+% Metadata
+\setuniversity{Universidad de El Salvador}
+\setfaculty{Facultad de Ingeniería y Arquitectura}
+\setschool{Escuela de Ingeniería de Sistemas Informáticos}
+\setdegree{Ingeniero de Sistemas Informáticos}
+\settitlethesis{Plantilla de tesis en \LaTeX{} para la UES (XeLaTeX + biber, estilo APA)}
+\setadvisor{Ing. Bladimir Díaz Campos}
+\setcity{Ciudad Universitaria}
+\setmonthyear{Septiembre de 2023}
+
+% Multi-autor (opcional; hasta 6).
+\setauthori{Jane Doe 1}
+\setauthorii{John Doe 2}
+% \setauthoriii{Jane Doe 3}
+% \setauthoriv{John Doe 4}
+% \setauthorv{Jane Doe 5}
+% \setauthorvi{John Doe 6}
+
+% Autoridades (puedes ajustar estos campos)
+\setrector{MSc. Roger Armando Arias Alvarado}
+\setsecgral{Ing. Francisco Alarcón Sandoval}
+\setdean{PhD. Edgar Armando Peña Figueroa}
+\setfacultysec{Ing. Julio Alberto Portillo}
+\setdirector{Ing. Rudy Wilfredo Chicas Villegas}
+
+% Bibliography
+\addbibfile{references.bib}
+
+% Definiciones de acrónimos y glosario (Van definidas antes del preámbulo del documento)
+\input{frontmatter/acronimos}
+\input{frontmatter/glosario}
+
+\begin{document}
+
+% Front matter (Aqui se genera la portada, autoridades, aprobacion, etc.)
+\frontmatterpages
+
+
+% Cuerpo del documento (Busca en DEIthesis.cls la definición de \mainmatterpages y modifícala si es necesario)
+\mainmatterpages
+
+% Bibliografía
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Referencias}
+\printbibliography[title={Referencias}]
+
+% --- Glosario de términos (después de Referencias) ---
+\printglossary[title={Glosario de términos}]
+
+% Apéndices
+\appendix
+\appendixpage
+\addappheadtotoc
+
+\input{appendices/appendix1}
+\input{appendices/code_listings}
+
+
+\end{document}

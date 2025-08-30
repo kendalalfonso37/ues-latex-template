@@ -1,0 +1,145 @@
+{
+    // LaTeX Workshop + CSpell Settings
+    // 
+    // Estas configuraciones son para poder trabajar en un entorno con LaTeX utilizando Visual Studio Code.
+    // Puedes sentirte libre de modificar este .code-workspace como tu lo necesites. 
+    // Inicialmente esta pensado para trabajar con XeLaTeX + biber pero es totalmente compatible con pdflatex + biber. Ademas de utilizar Jabref como Gestor bibliografico.
+    // 
+    // Autor de la plantilla LaTeX: Dr. Javier de Pedro Carracedo [Universidad de Alcalá]
+    // Autor de la memoria: Br. Kendal Alfonso Sosa [Universidad de El Salvador]
+    // 
+    "folders": [
+        {
+            "path": "../"
+        }
+    ],
+    "settings": {
+        "editor.wordWrap": "on",
+        "workbench.editorAssociations": {
+            "*.pdf": "latex-workshop-pdf-hook"
+        },
+        "[latex]": {
+            "editor.defaultFormatter": "James-Yu.latex-workshop"
+        },
+        "cSpell.words": [
+            "absorbancia",
+            "actuadores",
+            "Arduino",
+            "loop",
+            "setup",
+            "Sketch"
+        ],
+        // Controls the spelling language
+        "cSpell.language": "es-ES,es",
+        // Controls the maximum number of spelling errors per document.
+        "cSpell.maxNumberOfProblems": 10000,
+        // Controls the number of suggestions shown.
+        "cSpell.numSuggestions": 8,
+        // The minimum length of a word before checking it against a dictionary.
+        "cSpell.minWordLength": 4,
+        // Specify file types to spell check.
+        "cSpell.enabledLanguageIds": [
+            "markdown",
+            "latex",
+            "plaintext",
+        ],
+        // Enable / Disable the spell checker.
+        "cSpell.enabled": true,
+        // Display the spell checker status on the status bar.
+        "cSpell.showStatus": true,
+        // Enable / Disable compound words like 'errormessage'
+        "cSpell.allowCompoundWords": false,
+        // Specify paths/files to ignore.
+        "cSpell.ignorePaths": [
+            ".git", // Ignore the .git directory
+        ],
+        // Set the delay before spell checking the document. Default is 50.
+        "cSpell.spellCheckDelayMs": 50,
+        "latex-workshop.latex.clean.subfolder.enabled": true,
+        "latex-workshop.latex.clean.fileTypes": [
+            "*.aux",
+            "*.bbl",
+            "*.bcf",
+            "*.blg",
+            "*.idx",
+            "*.ind",
+            "*.lof",
+            "*.loa",
+            "*.lol",
+            "*.lot",
+            "*.out",
+            "*.toc",
+            "*.acn",
+            "*.acr",
+            "*.alg",
+            "*.glg",
+            "*.glo",
+            "*.gls",
+            "*.fls",
+            "*.log",
+            "*.fdb_latexmk",
+            "*.pdf",
+            "*.snm",
+            "*.synctex(busy)",
+            "*.synctex.gz(busy)",
+            "*.synctex.gz",
+            "*.nav",
+            "*.run.xml",
+            "*.vrb"
+        ],
+        "latex-workshop.latex.autoBuild.run": "onSave",
+        "latex-workshop.latex.recipes": [
+            {
+                "name": "pdflatex -> biber -> pdflatex * 2",
+                "tools": [
+                    "pdflatex",
+                    "biber",
+                    "pdflatex",
+                    "pdflatex"
+                ]
+            },
+            {
+                "name": "xelatex -> biber -> xelatex * 2",
+                "tools": [
+                    "xelatex",
+                    "biber",
+                    "xelatex",
+                    "xelatex"
+                ]
+            },
+        ],
+        "latex-workshop.latex.recipe.default": "lastUsed",
+        "latex-workshop.latex.tools": [
+            {
+                "name": "pdflatex",
+                "command": "pdflatex",
+                "args": [
+                    "-synctex=1",
+                    "-interaction=nonstopmode",
+                    "-file-line-error",
+                    "%DOC%"
+                ],
+                "env": {}
+            },
+            {
+                "name": "xelatex",
+                "command": "xelatex",
+                "args": [
+                    "-synctex=1",
+                    "-interaction=nonstopmode",
+                    "-file-line-error",
+                    "%DOC%"
+                ],
+                "env": {}
+            },
+            {
+                "name": "biber",
+                "command": "biber",
+                "args": [
+                    "%DOCFILE%"
+                ],
+                "env": {}
+            },
+        ]
+    }
+}
