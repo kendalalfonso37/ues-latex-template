@@ -19,8 +19,9 @@
 \RequirePackage{colorprofiles}
 
 % font and encodings
-\RequirePackage{newpxtext,newpxmath}
-\RequirePackage[T1]{fontenc}
+% \RequirePackage{newpxtext,newpxmath}
+% \RequirePackage[T1]{fontenc}
+\RequirePackage{unicode-math}
 
 % Page & typography
 \RequirePackage[top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm]{geometry}

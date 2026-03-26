@@ -1,6 +1,32 @@
 % main.tex - UES Thesis Template (APA + default fonts + double spacing)
 \documentclass{DEIthesis}
 
+% ===== Idioma y fuentes modernas =====
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+
+\setmainfont[
+  Ligatures=TeX,
+  Numbers=Lining,
+  BoldFont={DejaVu Serif Bold},
+  ItalicFont={DejaVu Serif Italic},
+  BoldItalicFont={DejaVu Serif Bold Italic}
+]{DejaVu Serif}
+
+\setsansfont[
+  Scale=MatchLowercase
+]{DejaVu Sans}
+
+\setmonofont[
+  Scale=MatchLowercase
+]{Liberation Mono}
+
+\setmathfont{DejaVu Math TeX Gyre}
+% ===== Idioma y fuentes modernas =====
+
+
 % Metadata
 \setuniversity{Universidad de El Salvador}
 \setfaculty{Facultad de Ingeniería y Arquitectura}

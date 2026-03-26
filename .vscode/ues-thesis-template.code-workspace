@@ -90,15 +90,6 @@
         "latex-workshop.latex.autoBuild.run": "onSave",
         "latex-workshop.latex.recipes": [
             {
-                "name": "pdflatex -> biber -> pdflatex * 2",
-                "tools": [
-                    "pdflatex",
-                    "biber",
-                    "pdflatex",
-                    "pdflatex"
-                ]
-            },
-            {
                 "name": "xelatex -> biber -> xelatex * 2",
                 "tools": [
                     "xelatex",
